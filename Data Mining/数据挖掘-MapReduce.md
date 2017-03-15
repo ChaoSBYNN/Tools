@@ -28,4 +28,4 @@ MapReduce 在大量节点组成的集群上运行（分布式计算）。
 * **map** 任务之间不做数据交流，**reduce** 任务也一样（每个节点只处理自己的事务）
 * 在 **map** 和  **reduce** 阶段之间，有一个 **sort** 或 **combine** 阶段
 * 数据被重复存放在不同的机器上，以防某个机器失效
-* **mapper** 和 **reducer** 传输的数据形式为 **key/value** 对
+* **mapper** 和 **reducer** 传输的数据形式为 **key/value** 对 
