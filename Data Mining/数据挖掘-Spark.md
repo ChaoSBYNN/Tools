@@ -4,8 +4,7 @@ date: 2017-03-21 22:12:43
 tags: [DataMining,Tools,Spark]
 ---
 
-> Spark : 借鉴了MapReduce之上发展而来的，继承了其分布式并行计算的优点并改进了MapReduce明显的缺陷
-
+> Spark : 借鉴了MapReduce之上发展而来的，继承了其分布式并行计算的优点并改进了MapReduce明显的缺陷。
 # 运行模式
 
 |环境|描述|模式|
