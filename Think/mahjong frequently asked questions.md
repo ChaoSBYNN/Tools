@@ -42,6 +42,13 @@ sa.sh && sp.sh
 3. service.sh
 4. xiantao-mahjong-server-1.0.0-SNAPSHOT.jar
 
+### 支付&代理接入
+
+1. server.xml 端口号
+2. config.xml
+  <entry key="gameSocketPort">17764</entry>
+  <entry key="logicGameId">327941</entry>
+3. catalina.sh Java 内存限制
 
 ### 常用调用
 
