@@ -59,6 +59,7 @@ sa.sh && sp.sh
 ```java
   GameLogicProcessor class
     public void tryEnterRoom(Player pl,int roomID){
+      ...
       //GameTable gt=rm.enterCommonTable(pl,SystemConfig.mjType);
       GameTable gt=rm.enterCommonTable(pl,GameConstant.GAME_PLAY_RULE_XIANTAO_YILAIDAODI);
     }
