@@ -50,6 +50,11 @@ sa.sh && sp.sh
   <entry key="logicGameId">327941</entry>
 3. catalina.sh Java 内存限制
 
+### 新手练习
+
+SystemConfig.mjType =>  GAME_PLAY_SOME_RULE
+SystemConfig.mjType 父类存在默认值
+
 ### 常用调用
 
 XiantaoGameLogicProcessor
