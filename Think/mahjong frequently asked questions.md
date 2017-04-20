@@ -10,8 +10,8 @@
 
 ### 房间金币
 
-1. config_db    global_congif
-2. hubei_heji_xt_db    t_global
+1. config_db    global_congif   客户端获取配置信息
+2. hubei_heji_xt_db    t_global  服务器通过获取配置信息验证
 
 ### 分支
 
@@ -28,7 +28,8 @@
 
 ### 测试打包流程
 
-119.29.222.68
+119.29.222.68 gate测试服务器
+
 1. /data1/home/genghaoliang/RoomProxy_test2/conf
 vi proxy.conf
 
@@ -37,7 +38,7 @@ sa.sh && sp.sh
 
 已迁移至 /data1/games/
 
-115.159.48.163
+115.159.48.163 logic测试服务器
 
 /data1/games/xiantao
 1. config
@@ -55,6 +56,13 @@ sa.sh && sp.sh
 
 ### 新手练习
 
+```java
+  GameLogicProcessor class
+    public void tryEnterRoom(Player pl,int roomID){
+      //GameTable gt=rm.enterCommonTable(pl,SystemConfig.mjType);
+      GameTable gt=rm.enterCommonTable(pl,GameConstant.GAME_PLAY_RULE_XIANTAO_YILAIDAODI);
+    }
+```
 SystemConfig.mjType =>  GAME_PLAY_SOME_RULE
 SystemConfig.mjType 父类存在默认值
 
