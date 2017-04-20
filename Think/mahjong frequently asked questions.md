@@ -28,7 +28,7 @@
 
 ### 测试打包流程
 
-119.29.222.68 gate测试服务器
+#### 119.29.222.68 gate测试服务器
 
 1. /data1/home/genghaoliang/RoomProxy_test2/conf
 vi proxy.conf
@@ -38,7 +38,7 @@ sa.sh && sp.sh
 
 已迁移至 /data1/games/
 
-115.159.48.163 logic测试服务器
+#### 115.159.48.163 logic测试服务器
 
 /data1/games/xiantao
 1. config
