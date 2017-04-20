@@ -5,7 +5,8 @@
 3. PlayerService    extends
 4. MachineService    etends
 5. GameLogicProcessor    	@Qualifier("playerService")    @Qualifier("machineService")
-6. AsyncLogicHandleThread    	@Qualifier("playerService")    	@Qualifier("machineService")
+6. AsyncLogicHandleThread    	@Qualifier("playerService")    	@Qualifier("machineService")
+7. Player 下 copy_game_state 短线重连恢复数据
 
 ### 房间金币
 
@@ -33,6 +34,8 @@ vi proxy.conf
 
 2. /data1/home/genghaoliang/RoomProxy_test2/bin
 sa.sh && sp.sh
+
+已迁移至 /data1/games/
 
 115.159.48.163
 
