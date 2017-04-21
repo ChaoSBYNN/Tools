@@ -6,7 +6,7 @@
 
 ### 常用调用
 
-XiantaoGameLogicProcessor
+#### XiantaoGameLogicProcessor
 1. createVIPTable
 2. sendCards
 3. notifyNextPlayerOperation
@@ -14,7 +14,7 @@ XiantaoGameLogicProcessor
 5. playingTableTick
 6. gameTableTick
 
-XiantaoAsyncLogicHandleThread
+#### XiantaoAsyncLogicHandleThread
 1. execute_operation_msg
 2. playerChuOperation
 3. player_chu_notify
@@ -26,7 +26,7 @@ XiantaoAsyncLogicHandleThread
 9. player_hu
 10. win_lose_gold_calculate_hu
 
-XiantaoMahjongProcessor
+#### XiantaoMahjongProcessor
 1. check_chi
 2. check_peng
 3. check_gang_with_hun
