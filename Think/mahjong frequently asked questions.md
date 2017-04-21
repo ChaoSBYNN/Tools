@@ -3,7 +3,7 @@
 1. create feature/some_xxx
 2. push to origin feature/some_xxx
 3. origin feature/some_xxx to pull request develop ,and delete feature/some_xxx
-
+-------
 ### 常用调用
 
 #### XiantaoGameLogicProcessor
@@ -32,7 +32,7 @@
 3. check_gang_with_hun
 4. checkWin
 5. doCheckWin
-
+-------
 ### CardDown 牌组扩展
 
 1. Player    add    CardDown
@@ -42,7 +42,7 @@
 5. GameLogicProcessor    	@Qualifier("playerService")    @Qualifier("machineService")
 6. AsyncLogicHandleThread    	@Qualifier("playerService")    	@Qualifier("machineService")
 7. Player 下 copy_game_state 短线重连恢复数据
-
+-------
 ### 新手练习
 
 ```java
@@ -55,19 +55,19 @@
 ```
 SystemConfig.mjType =>  GAME_PLAY_SOME_RULE
 SystemConfig.mjType 父类存在默认值
-
+-------
 ### pom 文件
 
 1. project artifactId
 2. manifest mainClass
-
+-------
 ### 房间金币
 
 1. config_db    global_congif   客户端获取配置信息
 2. hubei_heji_xt_db    t_global  服务器通过获取配置信息验证
-
+-------
 ### 方法名一致性 （1新老框架）（2子类父类）
-
+-------
 ### 测试打包流程
 
 #### 119.29.222.68 gate测试服务器
@@ -87,7 +87,7 @@ sa.sh && sp.sh
 2. lib
 3. service.sh
 4. xiantao-mahjong-server-1.0.0-SNAPSHOT.jar
-
+-------
 ### 支付&代理接入
 
 1. server.xml 端口号
