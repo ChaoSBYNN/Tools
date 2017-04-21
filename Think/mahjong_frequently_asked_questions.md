@@ -53,8 +53,6 @@
       GameTable gt=rm.enterCommonTable(pl,GameConstant.GAME_PLAY_RULE_XIANTAO_YILAIDAODI);
     }
 ```
-SystemConfig.mjType =>  GAME_PLAY_SOME_RULE
-SystemConfig.mjType 父类存在默认值
 -------
 ### pom 文件
 
