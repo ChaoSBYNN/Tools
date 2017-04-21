@@ -50,11 +50,12 @@ sa.sh && sp.sh
 
 1. server.xml 端口号
 2. config.xml
-  ※数据源地址 这里使用 &amp; 其他 使用 &   
-  e.g.:
-  jdbc:mysql://119.29.222.68:3306/hubei_heji_xt_db?useUnicode=true&amp;characterEncoding=utf8
+```xml  
+  #数据源地址 这里使用 &amp; 其他 使用 &   
+  jdbc:mysql://119.29.222.68:3306/hubei_heji_xt_db?useUnicode=true&amp;characterEncoding=utf8
   <entry key="gameSocketPort">17764</entry>
   <entry key="logicGameId">327941</entry>
+```
 3. catalina.sh Java 内存限制
 
 ### 新手练习
