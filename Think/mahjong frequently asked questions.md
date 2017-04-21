@@ -52,7 +52,7 @@ sa.sh && sp.sh
 2. config.xml
 ```xml  
   #数据源地址 这里使用 &amp; 其他 使用 &   
-  jdbc:mysql://119.29.222.68:3306/hubei_heji_xt_db?useUnicode=true&amp;characterEncoding=utf8
+  <entry key="dataSource.jdbcUrl">jdbc:mysql://119.29.222.68:3306/hubei_heji_xt_db?useUnicode=true&amp;characterEncoding=utf8</entry>
   <entry key="gameSocketPort">17764</entry>
   <entry key="logicGameId">327941</entry>
 ```
