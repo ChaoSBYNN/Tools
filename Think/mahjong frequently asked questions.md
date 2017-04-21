@@ -1,3 +1,38 @@
+### 分支使用
+
+1. create feature/some_xxx
+2. push to origin feature/some_xxx
+3. origin feature/some_xxx to pull request develop ,and delete feature/some_xxx
+
+### 常用调用
+
+XiantaoGameLogicProcessor
+1. createVIPTable
+2. sendCards
+3. notifyNextPlayerOperation
+4. player_chu_notify
+5. playingTableTick
+6. gameTableTick
+
+XiantaoAsyncLogicHandleThread
+1. execute_operation_msg
+2. playerChuOperation
+3. player_chu_notify
+4. player_op_peng
+5. player_op_gang
+6. real_player_op_gang
+7. player_op_hu
+8. auto_hu_other_player
+9. player_hu
+10. win_lose_gold_calculate_hu
+
+XiantaoMahjongProcessor
+1. check_chi
+2. check_peng
+3. check_gang_with_hun
+4. checkWin
+5. doCheckWin
+
 ### CardDown 牌组扩展
 
 1. Player    add    CardDown
@@ -8,23 +43,30 @@
 6. AsyncLogicHandleThread    	@Qualifier("playerService")    	@Qualifier("machineService")
 7. Player 下 copy_game_state 短线重连恢复数据
 
-### 房间金币
+### 新手练习
 
-1. config_db    global_congif   客户端获取配置信息
-2. hubei_heji_xt_db    t_global  服务器通过获取配置信息验证
-
-### 分支
-
-1. create feature/some_xxx
-2. push to origin feature/some_xxx
-3. origin feature/some_xxx to pull request develop ,and delete feature/some_xxx
-
-### 方法名一致性 （1新老框架）（2子类父类）
+```java
+  GameLogicProcessor class
+    public void tryEnterRoom(Player pl,int roomID){
+      ...
+      //GameTable gt=rm.enterCommonTable(pl,SystemConfig.mjType);
+      GameTable gt=rm.enterCommonTable(pl,GameConstant.GAME_PLAY_RULE_XIANTAO_YILAIDAODI);
+    }
+```
+SystemConfig.mjType =>  GAME_PLAY_SOME_RULE
+SystemConfig.mjType 父类存在默认值
 
 ### pom 文件
 
 1. project artifactId
 2. manifest mainClass
+
+### 房间金币
+
+1. config_db    global_congif   客户端获取配置信息
+2. hubei_heji_xt_db    t_global  服务器通过获取配置信息验证
+
+### 方法名一致性 （1新老框架）（2子类父类）
 
 ### 测试打包流程
 
@@ -57,45 +99,3 @@ sa.sh && sp.sh
   <entry key="logicGameId">327941</entry>
 ```
 3. catalina.sh Java 内存限制
-
-### 新手练习
-
-```java
-  GameLogicProcessor class
-    public void tryEnterRoom(Player pl,int roomID){
-      ...
-      //GameTable gt=rm.enterCommonTable(pl,SystemConfig.mjType);
-      GameTable gt=rm.enterCommonTable(pl,GameConstant.GAME_PLAY_RULE_XIANTAO_YILAIDAODI);
-    }
-```
-SystemConfig.mjType =>  GAME_PLAY_SOME_RULE
-SystemConfig.mjType 父类存在默认值
-
-### 常用调用
-
-XiantaoGameLogicProcessor
-0. createVIPTable
-1. sendCards
-2. notifyNextPlayerOperation
-3. player_chu_notify
-4. playingTableTick
-5. gameTableTick
-
-XiantaoAsyncLogicHandleThread
-0. execute_operation_msg
-1. playerChuOperation
-2. player_chu_notify
-3. player_op_peng
-4. player_op_gang
-5. real_player_op_gang
-6. player_op_hu
-7. auto_hu_other_player
-8. player_hu
-9. win_lose_gold_calculate_hu
-
-XiantaoMahjongProcessor
-0. check_chi
-1. check_peng
-2. check_gang_with_hun
-3. checkWin
-4. doCheckWin
