@@ -65,6 +65,9 @@
 2. hubei_heji_xt_db    t_global  服务器通过获取配置信息验证
 -------
 ### 数据库名称
+mjxt-server\src\main\resources\mybatis\mapper-log
+VipGameRecord.xml
+VipRoomRecord.xml
 -------
 ### 方法名一致性 
 
