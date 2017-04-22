@@ -66,8 +66,9 @@
 -------
 ### 数据库名称
 mjxt-server\src\main\resources\mybatis\mapper-log
-VipGameRecord.xml
-VipRoomRecord.xml
+
+1. VipGameRecord.xml
+2. VipRoomRecord.xml
 -------
 ### 方法名一致性 
 
