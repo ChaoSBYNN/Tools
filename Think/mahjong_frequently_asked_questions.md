@@ -64,6 +64,8 @@
 1. config_db    global_congif   客户端获取配置信息
 2. hubei_heji_xt_db    t_global  服务器通过获取配置信息验证
 -------
+### 数据库名称
+-------
 ### 方法名一致性 
 
 1. 新老框架
