@@ -1,0 +1,3 @@
+1. ps -ef |grep some-port-name
+2. lsof -i:some-port-value
+3. kill -9 some-port-value
