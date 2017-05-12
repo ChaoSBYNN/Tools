@@ -3,6 +3,7 @@ message PlayerInfo{
 	
 	//扑克扩展
 	optional int32 showBadge = 21;        //扑克 玩家标记、徽章 (大冶打拱存在标记鸣鸡 或者其他玩法存在闲家标记)
+					      //断线重连使用
 }
 
 message PlayerOperationNotifyMsg{//游戏服务器通知客户端，轮到玩家操作了
