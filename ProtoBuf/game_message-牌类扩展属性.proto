@@ -26,4 +26,4 @@ message PlayerTableOperationMsg{//玩家进行的操作
 	optional uint32 specialCard=17;       //扑克 特殊操作展示牌 (大冶打拱:叫牌 或者 开局时不会马上确定 需要玩家操作后决定的牌)
 }
 
-//现在缺少癞子牌属性
+//现在缺少癞子牌属性 是否可以 扩展 specialCard 为 repeated
