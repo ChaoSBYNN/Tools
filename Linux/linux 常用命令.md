@@ -26,3 +26,7 @@
 	tail -f proxy.conf
 ```
 
+```shell
+	lsof -i:some-port-value
+```
+
