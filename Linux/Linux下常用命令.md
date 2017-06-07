@@ -30,3 +30,8 @@
 	lsof -i:some-port-value
 ```
 
+输出某文件尾信息 包含2.113 并且 不包含 "HandleHeartBeat" (-v 不包含)
+
+```shell
+	 tail -f gate_sys_svr.log.2017-06-07.0 | grep 2.113 | grep -v "HandleHeartBeat"
+```
