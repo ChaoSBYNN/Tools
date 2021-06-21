@@ -14,3 +14,5 @@
 
 * `@SpringBootApplication:exclude` 只能排除 `@EnableAutoConfiguration`
 * `@ComponentScan:excludeFilters` 扫描全部注解
+
+https://blog.csdn.net/csdn_20150804/article/details/116104742
