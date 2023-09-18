@@ -13,6 +13,7 @@
 3. Docker
 4. Kubernetes
 5. Argo CD
+6. Rancher
 
 -----------------
 
