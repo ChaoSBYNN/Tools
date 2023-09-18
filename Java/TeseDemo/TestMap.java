@@ -19,40 +19,40 @@ public class TestMap {
             if(null == laiziPlayer){
                 return;
             }
-            //CHAOS_ZHANG µ±Ç°ñ®×Óµ×Êı ²éÕÒÍ¬Ò»Íæ¼Ò´ò³ö¸Ãñ®×ÓÇ°ñ®×ÓµÄ´ÎÊı
+            //CHAOS_ZHANG å½“å‰ç™å­åº•æ•° æŸ¥æ‰¾åŒä¸€ç©å®¶æ‰“å‡ºè¯¥ç™å­å‰ç™å­çš„æ¬¡æ•°
             int base = getBase(i,laiziMap,laiziPlayer);
-            //CHAOS_ZHANG µ±Ç°ÕÅñ®×Ó´ò³ö½±Àø µ×·¬ (Ä¬ÈÏÒ»´Îñ®×Ó base = 0)
+            //CHAOS_ZHANG å½“å‰å¼ ç™å­æ‰“å‡ºå¥–åŠ± åº•ç•ª (é»˜è®¤ä¸€æ¬¡ç™å­ base = 0)
             int laiziScore = 1 << base;
-            //CHAOS_ZHANG ¼ÆÄ³¸öÍæ¼Òµ±Ç°ñ®×Ó´ò³öºó×Ü½±Àø
+            //CHAOS_ZHANG è®¡æŸä¸ªç©å®¶å½“å‰ç™å­æ‰“å‡ºåæ€»å¥–åŠ±
             int count_win = 0;
 
             for (String player : plist) {
-                //CHAOS_ZHANG Æ®ñ®×Ó3Åâ1 ñ®×ÓÍæ¼Ò²»Åâ
+                //CHAOS_ZHANG é£˜ç™å­3èµ”1 ç™å­ç©å®¶ä¸èµ”
                 if(laiziPlayer.equals(player)){
                     continue;
                 }
-                //CHAOS_ZHANG Íæ¼Ò×Ü¿Û·ÖÍ³¼Æ
+                //CHAOS_ZHANG ç©å®¶æ€»æ‰£åˆ†ç»Ÿè®¡
                 int laizi_lose = 1;
-                //CHAOS_ZHANG µ±Ç°ñ®×Óµ×Êı ÆäËûÍæ¼ÒĞ¡ÓÚ¸Ãñ®×Ó
+                //CHAOS_ZHANG å½“å‰ç™å­åº•æ•° å…¶ä»–ç©å®¶å°äºè¯¥ç™å­
                 int obase = getBase(i,laiziMap,player);
 
-                //CHAOS_ZHANG Èç¹ûÆäËûÍæ¼ÒÒ²´ò³ö¹ıñ®×Ó ¼ÆËãñ®×Ó·­±¶ Åâ³¥ (´ò³öñ®×ÓË³ĞòĞ¡ÓÚ¸ÃË³Ğò)
+                //CHAOS_ZHANG å¦‚æœå…¶ä»–ç©å®¶ä¹Ÿæ‰“å‡ºè¿‡ç™å­ è®¡ç®—ç™å­ç¿»å€ èµ”å¿ (æ‰“å‡ºç™å­é¡ºåºå°äºè¯¥é¡ºåº)
                 boolean b1 = laiziMap.containsValue(player);
                 boolean b2 = obase>0;
 
                 if(b1&&b2){
                     laizi_lose = laiziScore * (1 << obase);
                 }else{
-                    laizi_lose = laiziScore;//CHAOS_ZHANG Õı³£Ëã·Ö
+                    laizi_lose = laiziScore;//CHAOS_ZHANG æ­£å¸¸ç®—åˆ†
                 }
 
-                count_win+=laizi_lose;//CHAOS_ZHANG µÃ·ÖÀÛ¼Ó
+                count_win+=laizi_lose;//CHAOS_ZHANG å¾—åˆ†ç´¯åŠ 
 
                 System.out.println("Player : "+player+(0 - (laizi_lose)));
 
             }
 
-            for(String lzplayer : plist){//CHAOS_ZHANG ×îºóËãÆ®ñ®×Ó ×Ü½±Àø ²éÕÒµ±Ç°Æ®ñ®×ÓÍæ¼Ò
+            for(String lzplayer : plist){//CHAOS_ZHANG æœ€åç®—é£˜ç™å­ æ€»å¥–åŠ± æŸ¥æ‰¾å½“å‰é£˜ç™å­ç©å®¶
                 if(laiziPlayer.equals(lzplayer)){
 
                   System.out.println("lzplayer : " + lzplayer+count_win);
@@ -63,13 +63,13 @@ public class TestMap {
 		
 	}
 	
-    //CHAOS_ZHANG »ñÈ¡ µ±Ç°Íæ¼Òµ±Ç°ñ®×Óµ×Êı
+    //CHAOS_ZHANG è·å– å½“å‰ç©å®¶å½“å‰ç™å­åº•æ•°
     public int getBase(int laiziValue,HashMap<String,String> laiziMap,String playerId){
-        //CHAOS_ZHANG µ±Ç°ñ®×Óµ×Êı
+        //CHAOS_ZHANG å½“å‰ç™å­åº•æ•°
         int base = 0;
 
         for(int j=1;j<laiziValue;j++){
-            //CHAOS_ZHANG ÔÚ´ËÆ®ñ®×ÓÖ®Ç°Í¬Ò»Íæ¼Ò Æ®¹ıñ®×Ó´ÎÊı
+            //CHAOS_ZHANG åœ¨æ­¤é£˜ç™å­ä¹‹å‰åŒä¸€ç©å®¶ é£˜è¿‡ç™å­æ¬¡æ•°
             if(playerId.equals(laiziMap.get((j+"")))){
             	base++;
             }
