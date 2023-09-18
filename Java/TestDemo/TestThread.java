@@ -2,13 +2,13 @@ class MyThead implements Runnable {
 	public void run() {
 		while(true){
 			
-			System.out.println("ÎÒĞİÏ¢ÁË£¡");
+			System.out.println("æˆ‘ä¼‘æ¯äº†ï¼");
 			try {
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
 				
 			}
-			System.out.println("Ò»ÃëºóÔÚ½ĞÎÒ°É£¡");
+			System.out.println("ä¸€ç§’ååœ¨å«æˆ‘å§ï¼");
 		}
 	}
 }
