@@ -1,6 +1,6 @@
 package com.core;
 
-public class TestEnum {
+public class TestEnum2 {
 
 	public enum Test {
 		DIAMONDS,
@@ -40,7 +40,7 @@ public class TestEnum {
 	
 	public static void main(String[] args) {
 		
-		TestEnum te = new TestEnum();
+		TestEnum2 te = new TestEnum2();
 		
 		te.test();
 		
