@@ -13,7 +13,7 @@ class MyThead implements Runnable {
 	}
 }
 
-public class TestThread {
+public class TestThread2 {
 	public static void main(String[] args) {
 		MyThead myThead = new MyThead();
 		Thread thread = new Thread(myThead);
