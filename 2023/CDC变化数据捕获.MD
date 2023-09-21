@@ -23,10 +23,10 @@
 
 |时间戳方式|快照方式|触发器方式|日志方式|
 |:----:|:----:|:----:|:----:|
-|能区分插入/更新|[ ]|[x]|[x]|[x]|
-|周期内，检测到多次更新|[ ]|[ ]|[x]|[x]|
-|能检测到删除|[ ]|[x]|[x]|[x]|
-|不具有侵入性|[ ]|[ ]|[ ]|[x]|
-|支持实时|[ ]|[ ]|[x]|[x]|
-|需要DBA|[ ]|[ ]|[x]|[x]|
-|不依赖数据库|[x]|[x]|[ ]|[ ]|
+|能区分插入/更新|:heavy_multiplication_x:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+|周期内，检测到多次更新|:heavy_multiplication_x:|:heavy_multiplication_x:|:heavy_check_mark:|:heavy_check_mark:|
+|能检测到删除|:heavy_multiplication_x:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+|不具有侵入性|:heavy_multiplication_x:|:heavy_multiplication_x:|:heavy_multiplication_x:|:heavy_check_mark:|
+|支持实时|:heavy_multiplication_x:|:heavy_multiplication_x:|:heavy_check_mark:|:heavy_check_mark:|
+|需要DBA|:heavy_multiplication_x:|:heavy_multiplication_x:|:heavy_check_mark:|:heavy_check_mark:|
+|不依赖数据库|:heavy_check_mark:|:heavy_check_mark:|:heavy_multiplication_x:|:heavy_multiplication_x:|
