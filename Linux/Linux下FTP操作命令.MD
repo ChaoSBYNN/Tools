@@ -5,7 +5,7 @@
 > - ftp [IP] [PORT]
 > - ftp [URL]
 
-```
+```shell
 [root@ftpsrv vsftpd]# ftp 127.0.0.1 21
 Connected to 127.0.0.1 (127.0.0.1).
 220 (vsFTPd 2.2.2)
@@ -22,13 +22,13 @@ ftp>
 
 ### 帮助命令
 
-```
+```shell
 ftp> ?|help                  # 显示ftp内部命令的帮助信息
 ```
 
 ### 查看命令
 
-```
+```shell
 ftp> dir
 227 Entering Passive Mode (127,0,0,1,44,241).
 150 Here comes the directory listing.
@@ -46,7 +46,7 @@ ftp>
 
 ### 切换ftp的目录
 
-```
+```shell
 ftp> cd aaa　　　　　　# 切换到ftp的aaa目录
 250 Directory successfully changed.
 ftp> pwd　　　　　　　　# 查看当前所在的ftp目录
@@ -63,7 +63,7 @@ ftp>
 ### 下载上传
 
 - 创建&删除目录
-  ```
+  ```shell
     ftp> mkdir ccc
     257 "/aaa/ccc" created
     ftp> ls
@@ -83,7 +83,7 @@ ftp>
     226 Directory send OK.
   ```
 - 下载文件
-  ```
+  ```shell
     ## 下载单个文件
     ftp> !pwd    　　　　# 查看当前所在的系统工作目录 
     /tmp
@@ -125,7 +125,7 @@ ftp>
     -rw-r--r-- 1 root root       0 Sep  5 17:14 aaa3
   ```
 - 上传文件
-  ```
+  ```shell
     ## 创建文件
     [root@ftpsrv tmp]# touch ddd1
     [root@ftpsrv tmp]# touch ddd2
@@ -182,7 +182,7 @@ ftp>
 
 ## 文件目录操作
 
-```
+```shell
   ftp> delete aaa2　　　　# 删除aaa2文件
   ftp> mdelete ddd1 ddd2 eee1
   
@@ -191,7 +191,7 @@ ftp>
 
 ## 其他命令
 
-```
+```shell
 ## 切换传输模式
 ftp> ascii  　　　　　　# 切换为ascii模式
 200 Switching to ASCII mode.
@@ -199,7 +199,7 @@ ftp> bin　　　　　　　　# 切换为二进制模式，默认登陆就是�
 200 Switching to Binary mode.
 ```
 
-```
+```shell
 ## 关闭和重连ftp
 ftp> close　　　　　　# 断开ftp的连接
 221 Goodbye.
