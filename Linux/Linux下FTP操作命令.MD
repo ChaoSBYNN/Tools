@@ -222,7 +222,7 @@ drwxr-xr-x    2 501      501          4096 Sep 05 16:59 bbb
 226 Directory send OK.
 ```
 
-```ssh
+```shell
 ## 退出ftp会话
 ftp> quit　　　　# 也可以使用bye和exit
 221 Goodbye.
