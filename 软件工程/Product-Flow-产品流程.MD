@@ -49,4 +49,4 @@
 2. 需要提供的明确的产出物
 3. 该步相应的审查人员
 
-![Imgae Caption](../SVG/ProgrammerDeployFlow.svg)
+![Imgae Caption](/SVG/ProgrammerDeployFlow.SVG)
