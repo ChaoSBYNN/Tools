@@ -1,7 +1,8 @@
 # Log 日志
 
-[Java日志-总结](https://blog.csdn.net/imjcoder/article/details/121688831)
-[Java 日志记录最佳实践](https://juejin.cn/post/7029968437933768734)
+- [Java日志-总结](https://blog.csdn.net/imjcoder/article/details/121688831)
+- [Java 日志记录最佳实践](https://juejin.cn/post/7029968437933768734)
+- [别再乱打日志了](https://zhuanlan.zhihu.com/p/560751693)
 
 ## 常用日志
 
