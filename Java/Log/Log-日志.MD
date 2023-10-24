@@ -3,6 +3,8 @@
 - [Java日志-总结](https://blog.csdn.net/imjcoder/article/details/121688831)
 - [Java 日志记录最佳实践](https://juejin.cn/post/7029968437933768734)
 - [别再乱打日志了](https://zhuanlan.zhihu.com/p/560751693)
+- [90%的开发不懂Java日志!](https://zhuanlan.zhihu.com/p/367591121)
+- [十分钟搞定Java日志体系](https://zhuanlan.zhihu.com/p/490155854)
 
 ## 常用日志
 
