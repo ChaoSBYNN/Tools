@@ -254,3 +254,60 @@ Auto DevOps 默认是启用的。
 `构建 -> 测试 -> 部署 -> 性能测试`
 
 ![gitlab18](https://pic1.zhimg.com/80/v2-f714653a3e394e7bc34595360b012adc_720w.webp)
+
+现在，应用已经成功部署，让我们通过浏览器查看。
+
+首先，导航到 `Operations > Environments`
+
+![gitlab19](https://pic3.zhimg.com/80/v2-def4886544f2e9d613583b69485829de_720w.webp)
+
+在Environments中，可以看到部署的应用的详细信息。在最右边有三个按钮，我们依次来看一下：
+
+第一个图标将打开在生产环境中部署的应用程序的URL。这是一个非常简单的页面，但重要的是它可以正常工作！
+
+紧挨着第二个是一个带小图像的图标，Prometheus将在其中收集有关Kubernetes集群以及应用程序如何影响它的数据（在内存/ CPU使用率，延迟等方面）
+
+![gitlab20](https://pic1.zhimg.com/80/v2-88112ea215e2f2d625ccee9bd649f854_720w.webp)
+
+第三个图标是Web终端，它将在运行应用程序的容器内打开终端会话。
+
+## Examples
+
+使用GitLab CI/CD部署一个Spring Boot应用
+
+示例 .gitlab-ci.yml
+
+```
+image: java:8
+
+  stages:
+   - build
+   - deploy
+
+  before_script:
+ - chmod +x mvnw
+
+  build:
+  stage: build
+   script: ./mvnw package
+   artifacts:
+     paths:
+       - target/demo-0.0.1-SNAPSHOT.jar
+
+  production:
+   stage: deploy
+   script: 
+  - curl --location "https://cli.run.pivotal.io/stable?release=linux64-binary&source=github" | tar zx
+   - ./cf login -u $CF_USERNAME -p $CF_PASSWORD -a api.run.pivotal.io
+   - ./cf push
+   only:
+   - master
+```
+
+## Doc
+
+- https://about.gitlab.com/solutions/kubernetes/
+- https://docs.gitlab.com/ee/ci/README.html
+- https://docs.gitlab.com/ee/ci/introduction/
+- https://docs.gitlab.com/ee/topics/autodevops/
+- https://docs.gitlab.com/ee/ci/e
