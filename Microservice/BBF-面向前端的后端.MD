@@ -6,33 +6,35 @@
 
 ![BFF1](https://picx.zhimg.com/80/v2-9d7d633aeb10cd53d5ecbe2d980c1f35_720w.webp?source=1940ef5c)
 
-优点
+### 优点
 
 - 分离 BFF 之间的关注点，使得我们可以为具体的 UI 优化他们。
 - 提供更高的安全性。
 - 减少 UI 和下游微服务之间频繁的通信。
 
-缺点
+### 缺点
 
 - BFF 之间代码重复。
 - 大量的 BFF 用于其他用户界面（例如，智能电视，Web，移动端，PC 桌面版）。
 - 需要仔细的设计和实现，BFF 不应该包含任何业务逻辑，而应只包含特定客户端逻辑和行为。
 
-何时使用 BFF
+### 何时使用 BFF
 
 - 如果应用程序有多个含不同 API 需求的 UI。
 - 出于安全需要，UI 和下游微服务之间需要额外的层。
 - 如果在 UI 开发中使用微前端。
 
-何时不宜使用 BFF
+### 何时不宜使用 BFF
 
 - 如果应用程序虽有多个 UI，但使用的 API 相同。
 - 如果核心微服务不是部署在 DMZ 网络中。
 
-可用技术示例
+### 可用技术示例
 
 任何后端框架（Node.js，Spring，Django，Laravel，Flask，Play，…）都能支持。
 
-- 延伸阅读Sam Newman - 面向前端的后端https://samnewman.io/patterns/architectural/bff/
+### 延伸阅读
+
+- Sam Newman - 面向前端的后端https://samnewman.io/patterns/architectural/bff/
 - 面向前端的后端模式 - 云设计模式https://docs.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends
 - 微服务模式：API 网关模式https://microservices.io/patter
