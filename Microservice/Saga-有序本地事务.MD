@@ -1,5 +1,7 @@
 # Saga
 
+[microservices Saga](https://microservices.io/patterns/data/saga.html)
+
 最强大的事务类型之一称为两阶段提交，当第一个事务的提交取决于第二个事务的完成时，它是摘要。特别是当您必须同时更新多个实体时，例如确认订单和立即更新库存时，它非常有用。
 
 > `commit`, `rollback`
