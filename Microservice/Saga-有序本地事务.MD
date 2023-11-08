@@ -25,6 +25,8 @@
 
 ![What](https://pic4.zhimg.com/80/v2-169b9d54539be654df03ea780e2d4dfb_720w.webp)
 
+![Flow](https://pic3.zhimg.com/v2-b74d718af4e44a6c541176426037bc7a_b.jpg)
+
 ![Saga](https://pic1.zhimg.com/80/v2-9d7d633aeb10cd53d5ecbe2d980c1f35_720w.webp?source=1940ef5c)
 
 如果本地事务失败，Saga 将执行一系列补偿事务来回滚前面本地事务的更改。
