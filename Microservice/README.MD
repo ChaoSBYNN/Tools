@@ -6,7 +6,7 @@
 4. [Saga](Saga.MD)
 5. [面向前端的后端 (BFF)](BBF-面向前端的后端.MD)
 6. [API网关](Gateway-API网关.MD)
-7. Strangler
+7. [Strangler](Strangler-逐步替换.MD)
 8. 断路器
 9. 外部化配置
 10. 消费端驱动的契约测试
