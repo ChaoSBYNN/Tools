@@ -9,7 +9,7 @@
 7. [Strangler](Strangler-逐步替换.MD)
 8. [Circuit Breaker 断路器](Circuit-Breaker-断路器.MD)
 9. [外部化配置](外部化配置.MD)
-10. 消费端驱动的契约测试
+10. [消费端驱动的契约测试](消费端驱动的契约测试.MD)
 
 - https://www.zhihu.com/question/469379093
 - https://microservices.io/
