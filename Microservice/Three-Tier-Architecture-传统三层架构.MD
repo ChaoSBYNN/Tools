@@ -15,8 +15,6 @@
 
 ![三层](https://picx.zhimg.com/80/v2-a840945b8428869e38f58a1a7ec67753_720w.webp?source=1def8aca)
 
-![三层2](https://picx.zhimg.com/80/v2-6110c8ff5dbedf57dafe61d7a0b9a1db_720w.webp)
-
 ## MVC
 
 MVC全名是Model View Controller，是模型(model)－视图(view)－控制器(controller)的缩写，一种软件设计典范，用一种业务逻辑、数据、界面显示分离的方法组织代码，将业务逻辑聚集到一个部件里面，在改进和个性化定制界面及用户交互的同时，不需要重新编写业务逻辑。MVC被独特的发展起来用于映射传统的输入、处理和输出功能在一个逻辑的图形化用户界面的结构中。
