@@ -1,5 +1,5 @@
 # Microservice 微服务架构模式
-1. 传统三层架构
+1. [传统三层架构](传统三层架构.MD)
 2. DDD架构
 3. [独享数据库 (Database per Microservice)](Database-per-独享数据库.MD)
 4. [事件源 (Event Sourcing)](Event-Sourcing-事件源.MD)
