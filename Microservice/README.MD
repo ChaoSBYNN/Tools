@@ -1,6 +1,6 @@
 # Microservice 微服务架构模式
 1. [传统三层架构](Three-Tier-Architecture-传统三层架构.MD)
-2. [DDD架构(Domain-Driven-Design)](Domain-Driven-Design-领域驱动设计.MD)
+2. [DDD架构 领域驱动设计 (Domain Driven Design)](Domain-Driven-Design-领域驱动设计.MD)
 3. [独享数据库 (Database per Microservice)](Database-per-独享数据库.MD)
 4. [事件源 (Event Sourcing)](Event-Sourcing-事件源.MD)
 5. [命令与查询职责分离 (CQRS)](CQRS-命令和查询职责分离.MD)
