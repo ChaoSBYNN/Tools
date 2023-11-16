@@ -17,6 +17,33 @@
 
 > 线程池的构造函数有7个参数，分别是`corePoolSize`、`maximumPoolSize`、`keepAliveTime`、`unit`、`workQueue`、`threadFactory`、`handler`。
 
+```java
+    // java.util.concurrent.ThreadPoolExecutor 类
+    public ThreadPoolExecutor(int corePoolSize,
+                              int maximumPoolSize,
+                              long keepAliveTime,
+                              TimeUnit unit,
+                              BlockingQueue<Runnable> workQueue,
+                              ThreadFactory threadFactory,
+                              RejectedExecutionHandler handler) {
+		...
+	}
+
+    // 实现
+    public static ThreadPoolExecutor getLessonAnalysisPool() {
+        if (lessonAnalysisPool == null) {
+            synchronized (ThreadPoolExecutorUtil.class) {
+                if (lessonAnalysisPool == null) {
+                    lessonAnalysisPool = new ThreadPoolExecutor(5, 10, 0,
+                            TimeUnit.MILLISECONDS, new LinkedBlockingQueue<>(50),
+                            r -> new Thread(r, "lesson-analysis-pool-%d"), new ThreadPoolExecutor.CallerRunsPolicy());
+                }
+            }
+        }
+        return lessonAnalysisPool;
+    }
+```
+
 1. `corePoolSize` 线程池核心线程大小 : 线程池中会维护一个最小的线程数量，即使这些线程处理空闲状态，他们也不会被销毁，除非设置了allowCoreThreadTimeOut。这里的最小线程数量即是corePoolSize。任务提交到线程池后，首先会检查当前线程数是否达到了corePoolSize，如果没有达到的话，则会创建一个新线程来处理这个任务。
 2. `maximumPoolSize` 线程池最大线程数量 : 当前线程数达到corePoolSize后，如果继续有任务被提交到线程池，会将任务缓存到工作队列（后面会介绍）中。如果队列也已满，则会去创建一个新线程来出来这个处理。线程池不会无限制的去创建新线程，它会有一个最大线程数量的限制，这个数量即由maximunPoolSize指定。
 3. `keepAliveTime` 空闲线程存活时间 : 一个线程如果处于空闲状态，并且当前的线程数量大于corePoolSize，那么在指定时间后，这个空闲线程会被销毁，这里的指定时间由keepAliveTime来设定
