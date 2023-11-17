@@ -14,3 +14,13 @@ N层架构 （n-tiers 结构，多层式运行架构）的四层是指Presentati
 
 ![n-tiers](https://pic3.zhimg.com/80/v2-b5839c53d542d7de46c2a3da5d9e61ae_720w.webp)
 
+J2EE 规范提出了自己的n-tiers结构。下表是几种模型的对照:
+
+|ISA|Brown|J2EE|对应程序部分|
+|:---|:---|:---|:---|
+|表示层|表示层|客户层|终端|
+|||服务器表示层|JSP,ActionFrom|
+||控制/中介层||Controller,Action|
+|领域层|领域层|业务层|JavaBean,SessionBean|
+||数据映射层|整合层|EntityBean,JDO,JDBC|
+|数据层|数据源层|资源层|RDBMS数据库, Redis|
