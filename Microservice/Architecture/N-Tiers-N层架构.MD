@@ -4,8 +4,13 @@
 
 这种体系结构将应用程序组织成水平层，每个层负责特定的任务。
 
+N层架构 （n-tiers 结构，多层式运行架构）的四层是指Presentation Tier（表示层，就是直接呈现在用户面前的界面）、Web Server Tier（Web服务器层）、 Application Server Tier（应用服务器层）和 Data Tier（数据层）.
+
+早期的网络系统设计常常采用三层结构。最常见的结构，就是表示(presentation)层 , 领域(domain)层 , 以及基础架构(infrastructure)层。
+
 - 表现层
 - 业务逻辑
 - 数据存取
 
 ![n-tiers](https://pic3.zhimg.com/80/v2-b5839c53d542d7de46c2a3da5d9e61ae_720w.webp)
+
