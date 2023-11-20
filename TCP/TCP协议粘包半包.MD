@@ -1,5 +1,7 @@
 # Socket TCP协议解决粘包、半包问题的三种解决方案
 
+![package](https://ask.qcloudimg.com/http-save/yehe-1552241/08c5c6d2e0de78211b9c86c17cfd2fdb.png)
+
 ## 什么是粘包、半包问题：
 
 粘包：例如服务端依次将两条消息发送给客户端，我们暂且简单的将这两条消息举例为"Hello"、"Unity"，而客户端一次性读取到的内容却是"HelloUnity"，像这种一次性读取到两条消息中数据内容的情况称之为粘包。
