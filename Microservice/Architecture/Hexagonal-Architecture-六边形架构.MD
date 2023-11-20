@@ -1,8 +1,10 @@
 # 六边形架构
 
-> 分层系统是一种架构风格，本质是避免耦合的出现。
+`分层系统是一种架构风格，本质是避免耦合的出现。`
 
-2005年Alistair Cockburn提出了六边形架构，在这个架构中，将应用分为内六边形和外六边形两层，内六边形实现应用的核心业务逻辑。外六边形完成外部应用，基础资源等的交互和访问，对于与不同的外部系统交互，由外六边形的适配器负责协议转换，保证内六边形业务逻辑的干净。
+2005年Alistair Cockburn提出了六边形架构，在这个架构中，将应用分为内六边形和外六边形两层，内六边形实现应用的核心业务逻辑。外六边形完成外部应用，基础资源等的交互和访问，对于与不同的外部系统交互，由外六边形的适配器负责协议转换，保证内六边形业务逻辑的干净。六边形架构(Hexagonal Architecture), 又叫做端口适配器模式(Ports & Adapters)
+
+> Allow an application to equally be driven by users, programs, automated test or batch scripts, and to be developed and tested in isolation from its eventual run-time devices and databases.
 
 这种架构也是典型的分层架构，和DDD分层架构一样，都体现了高内聚，低耦合的设计特性。六边形也常作为指导微服务设计的重要架构之一。
 
@@ -11,6 +13,22 @@
 ![六边形](https://img2020.cnblogs.com/blog/1135193/202105/1135193-20210531121458344-516091878.png)
 
 ## 六边形架构 (端口与适配器)
+
+### Why 为什么会出现六边形架构？
+
+多年来，软件应用程序的最大缺陷之一是业务逻辑渗透到用户界面代码中。 这引起的问题有三个方面：
+
+1. 首先，无法使用自动化测试套件对系统进行完整的测试，因为需要测试的部分逻辑依赖于经常变化的视觉细节，例如字段大小和按钮位置。
+2. 出于完全相同的原因，不可能从人工驱动的系统转换为批处理运行的系统。
+3. 出于同样的原因，当程序耦合度逐渐增高时，很难或不可能允许该程序被另一个程序驱动。
+
+在许多组织中反复尝试的解决方案是在体系结构中创建一个新层，并保证这次确实没有将业务逻辑放入新层中。 但是，由于没有机制来检测何时发生违反该承诺的情况，该组织发现，几年后，新层被业务逻辑弄得乱七八糟，旧问题又出现了。
+
+我们知道，电脑与周边设备是通过端口与驱动（适配器）交互的，且只需要有相应的驱动，端口可以和不同的设备进行交互。`六边形架构关注的是“外部”和“内部”的差别，内部业务逻辑（Application)与外设（APP,WEB，数据库等）完全隔离，仅通过Adapter 进行交互。`
+
+-------------------------------------------
+
+### What 架构思想
 
 1. 一种具有对称性特征的架构风格。
 2. 在这种架构中不同的客户通过“平等”的方式与系统交互。
@@ -56,6 +74,25 @@
   - 内六边形中的应用程序应当可以在不依赖外部的情况下自行测试。
 
 
+> - Explicitly separate Application, Domain, and Infrastructure 明确区分应用程序，领域和基础结构三个层
+> - Dependencies are going from Application and Infrastructure to the Domain 依赖关系是从应用程序和基础结构再到领域
+> - We isolate the boundaries by using Ports and Adapters 使用端口和适配器隔离它们的边界
 
+#### 第一个原则 : 分层
 
+![splite](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jaGFwYW9mYW4tcGljdHVyZS5vc3MtY24taGFuZ3pob3UuYWxpeXVuY3MuY29tL2ltZy9ibG9nLzIwMjAwMjAzMTc0ODIyLnBuZw?x-oss-process=image/format,png)
+
+- `应用程序端(Application)`：这是用户或外部程序将与应用程序进行交互的一面。API 的 HTTP 路由，JSON 序列化都在这里，有点类似于 MVC 的 controller 层。
+- `领域(Domain)`：左右两端隔离的部分，它包含所有涉及并实现业务逻辑的代码。
+- `基础架构(Infrastructure)`：在这里我们可以找到您的应用程序需要什么，它可以驱动什么工作。它包含基本的基础结构详细信息，例如与数据库交互的代码，对文件系统的调用或处理对您依赖的其他应用程序的 HTTP 调用的代码。
+
+#### 第二个原则 : 依赖关系进入域
+
+简单的说，**一切都依赖于 Domain，而 Domain 不依赖于任何东西**。Alistair Cockburn 坚持内部和外部之间的这种划分，这比应用程序和基础结构之间的差异更具结构性，可以解决最初的问题。
+
+![DI](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jaGFwYW9mYW4tcGljdHVyZS5vc3MtY24taGFuZ3pob3UuYWxpeXVuY3MuY29tL2ltZy9ibG9nLzIwMjAwMjA0MTQyOTI3LnBuZw?x-oss-process=image/format,png)
+
+#### 第三个原则 : 边界与接口隔离
+
+![side](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jaGFwYW9mYW4tcGljdHVyZS5vc3MtY24taGFuZ3pob3UuYWxpeXVuY3MuY29tL2ltZy9ibG9nLzIwMjAwMjA0MTQzMzM1LnBuZw?x-oss-process=image/format,png)
 
