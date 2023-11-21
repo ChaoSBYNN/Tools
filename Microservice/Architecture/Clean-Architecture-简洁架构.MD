@@ -42,6 +42,8 @@ Bob提取出来大部分架构所需要的准则：
 
 这个架构图里有4层，但是这个只是一个示意图，不一定非得有4层。具体有几层不是最重要的，最重要的是依赖顺序要保证是从外到内的。 也就是说，越往内层，逻辑的抽象层次越高。越往内层，抽象的层次越高，封装的逻辑越高级，越通用。
 
+![Layer](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2017/9/27/cf6d29b80b62da4905155c1cbe5fff5e~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png)
+
 ### Presentation Layer
 
 也就是MVX结构所对应的地方（MVC、MVP等），这里不处理UI以外的任何逻辑。
