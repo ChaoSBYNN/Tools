@@ -1,10 +1,22 @@
 # Clean Architecture
 
+uncle Bob文章以及翻译：http://www.cnblogs.com/wanpengcoder/p/3479322.html
+
 > Clean Code 的作者 Robert C. Martin (Uncle Bob)，写了一本书 Clean Architecture，从而提出了这个架构 (Clean Coder Blog)
+
+Bob提取出来大部分架构所需要的准则：
+
+- 框架独立。架构不依赖于一些满载功能的软件库。
+- 可测试性。
+- UI独立，在不改变系统其余部分的情况下完成对UI的简易更改。
+- 数据库独立，业务规则不绑定与某个具体的数据库当中，可以随意更换数据库的具体实现：比如说从SQL换到BigTable，这种情况不会对业务规则产生影响。
+- 外部机制独立，业务规则完全不知道外层的事情。
 
 ![Clean](https://pic1.zhimg.com/80/v2-28f5a77fe859101974d013bbd6cf61f8_720w.webp)
 
 `图中的总体思想是依赖的方向只能是从外向内。也就是说，外部的圈依赖内部的圈，内部的圈不能依赖外部。也就是说内圈对外圈一无所知，没有任何依赖。外层中命名和数据格式不能影响内层。`
+
+根据这些共有的理念，bob尝试将它们整合到一个单一可执行的想法中。这就是clean架构，而图片中的同心圆是架构思想的体现，代码用一种依赖规则分离到洋葱状的层：内层不应该知道关于外层的东西，依赖应该从外到内。
 
 ## What Clean Architecture 分层
 
