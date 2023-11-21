@@ -50,6 +50,12 @@ Bob提取出来大部分架构所需要的准则：
 
 业务逻辑,use case实现的地方，在这里包含了use case(用例)以及Bussiness Objects(业务对象),按照洋葱图的依赖规则，这层属于最内层，也就是完全不依赖于外层。
 
+### Data Layer
+
+所有APP需要的数据都是通过这层的XXDataRepository(实现了Domain层接口的类)提供的，它使用了Repository Pattern，关于Repository Pattern你可以参考我的翻译文章
+
+简要概括就是使用Repository将业务层与具体的查询逻辑分离，Repository的实现类主要职责就是存储查询数据，一个更简单的解释就是你可以把Repository的实现类当成是一个Java容器(Collections)，可以从中获取或存储数据(add/remove/etc),他对数据源进行了抽象。Domain层提供接口而不关心Data层到底是如何实现的，Data层的Repository只需要实现相关接口提供相关服务
+
 ## How 控制流程
 
 图的右下角是代码控制流的走向。是 按照`Controller -> Use Cases -> Presenter`这个路径走的。这里面有两个向右的箭头，表示的是代码的依赖方向。表示Controller和Presenter都依赖User Case层的代码。 你会发现一个问题，就是实际的代码运行的控制流程和代码的依赖方向是冲突的，这里就是通过接口实现了依赖反转。 图中的<I>表示接口，空三角箭头代表实现了接口，实线的箭头表示实际的依赖/调用关系。 举个例子，右侧的Use Case层的Use Case Interactor需要调用外层的Presenter，但是不能直接调用，因为这违反了依赖关系。所以，在内层(Use Case层) 加了一个接口Use Case Output Port，Use Case Interactor直接调用这个接口，而外层的Presenter实现了这个接口，这里就是依赖反转。
