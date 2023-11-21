@@ -44,15 +44,27 @@ Bob提取出来大部分架构所需要的准则：
 
 ![Layer](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2017/9/27/cf6d29b80b62da4905155c1cbe5fff5e~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png)
 
-### Presentation Layer
+### Presentation Layer 表现层
 
 也就是MVX结构所对应的地方（MVC、MVP等），这里不处理UI以外的任何逻辑。
 
-### Domain Layer
+![Presentation](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2017/9/27/ccccf90377a0baa49d63141cdd1a487f~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png)
+
+P层使得V层（Fragment和Activity）内部除UI逻辑再无其它逻辑。而我的开源项目中的Presenter由多个Interactor组成。
+
+### Domain Layer 领域层
 
 业务逻辑,use case实现的地方，在这里包含了use case(用例)以及Bussiness Objects(业务对象),按照洋葱图的依赖规则，这层属于最内层，也就是完全不依赖于外层。
 
-### Data Layer
+![Domain](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2017/9/27/1950f115073f471ca4b9beb4bc4f88cc~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png)
+
+interactor的实现类和业务对象。
+
+### Data Layer 数据层
+
+![Data](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2017/9/27/797ee7d22b857162e258f0432d996c08~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.png)
+
+这是一种Repository模式
 
 所有APP需要的数据都是通过这层的XXDataRepository(实现了Domain层接口的类)提供的，它使用了Repository Pattern，关于Repository Pattern你可以参考我的翻译文章
 
