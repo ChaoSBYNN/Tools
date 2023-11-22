@@ -1,5 +1,7 @@
 # G1 GC
 
+https://juejin.cn/post/7010034105165299725
+
 ## What is G1
 
 > `G1 (Garbage-First)` 主要针对配备多核CPU及大容量内存的机器,以极高概率满足GC停顿时间的同时,还兼具高吞吐量的性能特征
