@@ -3,9 +3,9 @@
 1. 私有构造器,防止外部new实例 `非线程安全`
 
 ```java
-    public static Singleton1 getInstance() {
+    public static Singleton getInstance() {
         if (instance == null) {
-            instance = new Singleton1();
+            instance = new Singleton();
         }
         return instance;
     }
