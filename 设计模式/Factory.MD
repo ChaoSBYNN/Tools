@@ -19,10 +19,10 @@ public class BizFactory {
 
 ```java
 public class BizFactory {
-    public IBiz createBizA(){
+    public IBiz createBizA() {
         return new BizA();
     }
-    public IBiz createBizB(){
+    public IBiz createBizB() {
         return new BizB();
     }
 }
@@ -32,10 +32,10 @@ public class BizFactory {
 
 ```java
 public class BizFactory {
-    public static IBiz createBizA(){
+    public static IBiz createBizA() {
         return new BizA();
     }
-    public static IBiz createBizB(){
+    public static IBiz createBizB() {
         return new BizB();
     }
 }
