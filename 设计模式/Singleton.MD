@@ -51,7 +51,7 @@
     }
 ```
 
-## 4. 内部静态工厂类提前创建好实例, JVM保证instance只创建一次, `内部静态工厂类提前创建好实例，JVM保证instance只创建一次，且线程安全`
+## 4. 内部静态工厂类提前创建好实例, JVM保证instance只创建一次, `线程安全`
 
 ```java
     private static class SingletonFactory{
