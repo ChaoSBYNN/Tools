@@ -1,5 +1,13 @@
 # Prototype 原型模式
 
+## 引用拷贝
+
+```java
+XxxObject obj1 = new XxxObject();
+XxxObject obj2 = obj1;
+
+```
+
 ## 浅拷贝
 
 ```java
