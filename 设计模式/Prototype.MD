@@ -3,6 +3,7 @@
 ## 浅拷贝
 
 ```java
+    @Override
     public XxxObject clone() throws CloneNotSupportedException {
         return (XxxObject) super.clone();
     }
