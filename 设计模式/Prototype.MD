@@ -2,6 +2,8 @@
 
 ## 引用拷贝
 
+> 引用拷贝不会在堆上创建一个新的对象，只 会在栈上生成一个新的引用地址，最终指向依然是堆上的`同一个对象`。
+
 ```java
 XxxObject obj1 = new XxxObject();
 XxxObject obj2 = obj1;
@@ -9,6 +11,13 @@ XxxObject obj2 = obj1;
 ```
 
 ## 浅拷贝
+
+浅拷贝会在堆上创建一个新的对象，`新对象和原对象不等，但是新对象的属性和老对象相同`。
+
+- 属性是基本类型(int,double,long,boolean等) 拷贝的就是基本类型的值
+- 属性是引用类型(除了基本类型都是引用类型) 拷贝的就是引⽤数据类型变量的地址值，⽽对于引⽤类型变量指向的堆中的对象不会拷贝
+
+实现浅拷贝呢？也很简单，就是在需要拷贝的类上实现Cloneable接口并重写其clone()方法
 
 ```java
 public class XxxObject implements Cloneable {
@@ -21,6 +30,8 @@ public class XxxObject implements Cloneable {
 ```
 
 ## 深拷贝
+
+> 完全拷贝⼀个对象，在堆上创建一个新的对象，拷贝被拷贝对象的成员变量的值，同时堆中的对象也会拷贝。 需要重写clone方法
 
 ```java
 public class XxxObject implements Serializable {
