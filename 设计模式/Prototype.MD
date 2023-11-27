@@ -3,10 +3,13 @@
 ## 浅拷贝
 
 ```java
+public class XxxObject implements Cloneable {
+
     @Override
     public XxxObject clone() throws CloneNotSupportedException {
         return (XxxObject) super.clone();
     }
+}
 ```
 
 ## 深拷贝
