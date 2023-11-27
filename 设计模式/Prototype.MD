@@ -15,6 +15,7 @@ public class XxxObject implements Cloneable {
 ## 深拷贝
 
 ```java
+public class XxxObject implements Serializable {
     public XxxObject deepClone() {
 
         // Anything 都是可以用字节流进行表示，记住是任何！
@@ -41,4 +42,5 @@ public class XxxObject implements Cloneable {
         }
         return xxxObject;
     }
+}
 ```
