@@ -4,7 +4,7 @@
 
 ## Get
 
-```http request
+```shell
 ### GET request with a header
 GET https://httpbin.org/ip
 Accept: application/json
