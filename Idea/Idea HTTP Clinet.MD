@@ -4,7 +4,7 @@
 
 ## Get
 
-```http
+```curl
 ### GET request with a header
 GET https://httpbin.org/ip
 Accept: application/json
@@ -26,3 +26,4 @@ GET http://httpbin.org/anything?id={{$uuid}}&ts={{$timestamp}}
 
 ###
 ```
+
