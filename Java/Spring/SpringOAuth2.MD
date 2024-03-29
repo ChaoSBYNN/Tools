@@ -1,7 +1,7 @@
 # SpringOAuth2
 
 [Spring Security 与 OAuth2 介绍](https://cloud.tencent.com/developer/article/1447784?areaId=106001)
-
+[OAuth2.0实战，使用JWT令牌认证](https://blog.csdn.net/best_luxi/article/details/121960777)
 
 ## OAuth2 角色
 
