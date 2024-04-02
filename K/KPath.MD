@@ -1,7 +1,7 @@
 ```
 └─com
     └─k
-        ├─boss -- 项目/软件/服务的简称
+        ├─server -- 项目/软件/服务的简称
         │  ├─demo
         │  │  ├─api
         │  │  ├─application
