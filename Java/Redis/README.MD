@@ -29,4 +29,4 @@ spring:
         min-idle: 0
         # 连接池中最大连接数，负数表示没有限制
         max-active: 20
-``
+```
