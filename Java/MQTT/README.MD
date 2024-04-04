@@ -28,4 +28,9 @@ mqtt:
   serverTopic: testtopic
   isOpen: true
   qos: 0
+
+# 循环引用配值
+spring:
+  main:
+    allow-circular-references: true
 ```
