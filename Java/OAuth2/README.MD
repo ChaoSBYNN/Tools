@@ -5,3 +5,14 @@
 * [oauth2](https://www.rfcreader.com/#rfc6749)
 
 https://gitcode.com/mingyang66/spring-parent/tree/feature_bak/spring-security-oauth2-server-jwt-service
+
+
+```xml
+
+        <!-- oauth2-authorization-server -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-oauth2-authorization-server</artifactId>
+            <version>0.4.2</version>
+        </dependency>
+```
