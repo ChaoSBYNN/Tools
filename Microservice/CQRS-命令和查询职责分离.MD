@@ -54,3 +54,5 @@ CQRS模式 - Azure 架构中心https://docs.microsoft.com/en-us/azure/architectu
 
 微服务模式：命令和查询职责分离（CQRS）https://microservices.io/patter
 
+[CQRS](https://zhuanlan.zhihu.com/p/115685384)
+
