@@ -56,3 +56,5 @@ CQRS模式 - Azure 架构中心https://docs.microsoft.com/en-us/azure/architectu
 
 [CQRS](https://zhuanlan.zhihu.com/p/115685384)
 
+[cqrs-event-sourcing-java](https://www.baeldung.com/cqrs-event-sourcing-java)
+
