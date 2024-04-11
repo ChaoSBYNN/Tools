@@ -18,3 +18,6 @@ https://gitcode.com/mingyang66/spring-parent/tree/feature_bak/spring-security-oa
             <version>0.4.2</version>
         </dependency>
 ```
+
+
+[OAuth2 Demo](https://java-family.cn/#/OAuth2.0/README)
