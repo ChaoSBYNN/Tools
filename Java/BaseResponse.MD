@@ -207,7 +207,7 @@ public interface ErrorCode extends Serializable {
 }
 ```
 
-```
+```java
 @Data
 public class ErrorResult implements Serializable {
   private static final long serialVersionUID = 4743989351981430858L;
