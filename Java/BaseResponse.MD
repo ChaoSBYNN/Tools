@@ -248,3 +248,135 @@ public class ErrorResult implements Serializable {
   }
 }
 ```
+
+```java
+
+import lombok.Getter;
+import org.springframework.lang.Nullable;
+
+public enum ResultCode {
+  // 2xx Success
+
+  /** 成功了。服务器已成功处理了请求。 */
+  OK(200, Series.SUCCESSFUL, "OK"),
+  /** 资源已创建。请求成功并且服务器创建了新的资源。 */
+  CREATED(201, Series.SUCCESSFUL, "Created"),
+  /** 已接受但未处理。服务器已接受请求，但尚未处理。 */
+  ACCEPTED(202, Series.SUCCESSFUL, "Accepted"),
+  // --- 4xx Client Error ---
+
+  /** 参数错误 */
+  BAD_REQUEST(400, Series.CLIENT_ERROR, "Bad Request"),
+  /** 未认证， 未授权 */
+  UNAUTHORIZED(401, Series.CLIENT_ERROR, "Unauthorized"),
+  /** 需付费 */
+  PAYMENT_REQUIRED(402, Series.CLIENT_ERROR, "Payment Required"),
+  /** 拒绝访问 */
+  FORBIDDEN(403, Series.CLIENT_ERROR, "Forbidden"),
+  /** 未找到 */
+  NOT_FOUND(404, Series.CLIENT_ERROR, "Not Found"),
+  /** 方法不被允许 */
+  METHOD_NOT_ALLOWED(405, Series.CLIENT_ERROR, "Method Not Allowed"),
+  /** 请求超时 */
+  REQUEST_TIMEOUT(408, Series.CLIENT_ERROR, "Request Timeout"),
+  /** 请求Body过大 */
+  PAYLOAD_TOO_LARGE(413, Series.CLIENT_ERROR, "Payload Too Large"),
+  /** 请求URL过长 */
+  URI_TOO_LONG(414, Series.CLIENT_ERROR, "URI Too Long"),
+  /** 绿茶警告 */
+  I_AM_A_TEAPOT(418, Series.CLIENT_ERROR, "I'm a teapot"),
+  /** 请求次数过多 */
+  TOO_MANY_REQUESTS(429, Series.CLIENT_ERROR, "Too Many Requests"),
+  /** 请求头过大 */
+  REQUEST_HEADER_FIELDS_TOO_LARGE(431, Series.CLIENT_ERROR, "Request Header Fields Too Large"),
+
+  // --- 5xx Server Error ---
+
+  /** 内部服务器错误 */
+  INTERNAL_SERVER_ERROR(500, Series.SERVER_ERROR, "Internal Server Error"),
+  /** 功能未实现 */
+  NOT_IMPLEMENTED(501, Series.SERVER_ERROR, "Not Implemented"),
+  /** 网关错误 */
+  BAD_GATEWAY(502, Series.SERVER_ERROR, "Bad Gateway"),
+  /** 服务不可用 */
+  SERVICE_UNAVAILABLE(503, Series.SERVER_ERROR, "Service Unavailable"),
+  /** 网关超时 */
+  GATEWAY_TIMEOUT(504, Series.SERVER_ERROR, "Gateway Timeout"),
+
+  // --- xxx Custom ---
+
+  ;
+  @Getter
+  private final int code;
+  @Getter
+  private final Series series;
+  @Getter
+  private final String msg;
+
+  ResultCode(int code, Series series, String msg) {
+    this.code = code;
+    this.series = series;
+    this.msg = msg;
+  }
+
+
+  public enum Series {
+
+    /** 成功状态类型 */
+    SUCCESSFUL(2),
+    CUSTOM(3),
+    /** 客户端错误类型 */
+    CLIENT_ERROR(4),
+    /** 服务端错误类型 */
+    SERVER_ERROR(5);
+
+    private final int value;
+
+    Series(int value) {
+      this.value = value;
+    }
+
+    /**
+     * Return the integer value of this status series. Ranges from 1 to 5.
+     */
+    public int value() {
+      return this.value;
+    }
+
+
+    /**
+     * Return the {@code Series} enum constant for the supplied status code.
+     *
+     * @param statusCode the HTTP status code (potentially non-standard)
+     * @return the {@code Series} enum constant for the supplied status code
+     * @throws IllegalArgumentException if this enum has no corresponding constant
+     */
+    public static Series valueOf(int statusCode) {
+      Series series = resolve(statusCode);
+      if (series == null) {
+        throw new IllegalArgumentException("No matching constant for [" + statusCode + "]");
+      }
+      return series;
+    }
+
+    /**
+     * Resolve the given status code to an {@code Series}, if possible.
+     *
+     * @param statusCode the HTTP status code (potentially non-standard)
+     * @return the corresponding {@code Series}, or {@code null} if not found
+     * @since 5.1.3
+     */
+    @Nullable
+    public static Series resolve(int statusCode) {
+      int seriesCode = statusCode / 100;
+      for (Series series : values()) {
+        if (series.value == seriesCode) {
+          return series;
+        }
+      }
+      return null;
+    }
+  }
+}
+
+```
