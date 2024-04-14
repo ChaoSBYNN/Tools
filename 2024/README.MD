@@ -1,4 +1,8 @@
 # 
 
-Chrome plugins : GitZip for github
-GitHub Isometric Contributions
+Chrome plugins : 
+
+* GitZip for github
+* GitHub Isometric Contributions
+* Gitlab Helper
+* GitLab Enhancer
