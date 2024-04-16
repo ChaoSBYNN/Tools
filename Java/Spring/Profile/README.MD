@@ -2,6 +2,8 @@
 
 [SpringBoot 2.4+ profile](https://www.cnblogs.com/xysn/p/14805281.html)
 
+![profile](./Image/profile.png)
+
 ## 2.4之前的的yml文件配置如下：
 
 ```yml
