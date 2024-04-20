@@ -25,3 +25,5 @@
 我更倾向于使用黑名单机制，有两个原因：
 
 一是会大大节省Redis的存储空间，我们甚至都不需要存储完整的jwt，只需要存储jwt中的唯一id jti即可。
+
+* [策略 恶意过期](https://www.cnblogs.com/standup/p/9184541.html)
