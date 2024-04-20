@@ -25,7 +25,7 @@
                 .withIssuer("Entropy")    // 签发者
                 .withIssuedAt(Instant.now())  // 签发时间
                 .withExpiresAt(instance.getTime())        // 有效时间
-                .withSubject("daji_yang@163.com")   // 面向用户
+                .withSubject("t7_chaos@163.com")   // 面向用户
                 .withAudience("www.baidu.com","www.google.com")  // 接收方
                 .withNotBefore(Instant.now())           // 定义某个时间前都不可用
                 .withJWTId("dddddddd")      // 唯一身份标识
