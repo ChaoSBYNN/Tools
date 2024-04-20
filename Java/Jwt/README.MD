@@ -43,3 +43,5 @@
         System.out.println(decodedJWT.getClaim("userId"));
         System.out.println(decodedJWT.getClaim("username"));
 ```
+
+* [登出失效](https://blog.csdn.net/weixin_54061333/article/details/132054099)
