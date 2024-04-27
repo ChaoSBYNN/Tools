@@ -18,3 +18,12 @@
         return constants;
     }
 ```
+
+```java
+        Field[] fields = FieldReflactTest.class.getDeclaredFields();
+        for (Field field : fields) {
+            String descriptor = Modifier.toString(field.getModifiers());//获得其属性的修饰
+            descriptor = descriptor.isEmpty() ? "" : descriptor + " ";
+            System.out.println(descriptor + field.getName() + "=" + field.get(new FieldReflactTest()));
+        }
+```
