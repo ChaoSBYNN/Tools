@@ -24,7 +24,7 @@
 
 > 基于redis存储
 
-```
+```java
 @EnableCaching
 @Configuration
 public class SpringCacheConfiguration extends CachingConfigurerSupport {
