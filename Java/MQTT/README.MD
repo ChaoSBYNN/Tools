@@ -5,6 +5,8 @@
 * https://www.cnblogs.com/JackyGz/p/17952920
 
 * [【基础】MQTT -- MQTT 特性：QoS、Retained 消息、LWT 以及 Keepalive](https://blog.csdn.net/zqf787351070/article/details/131331779)
+* [物联网协议之MQTT源码分析(二)](https://blog.csdn.net/weixin_34185560/article/details/91457600)
+* [【MQTT 5.0】协议 ——发布订阅模式、Qos、keepalive、连接认证、消息结构](https://blog.csdn.net/weixin_43764974/article/details/131277000)
 
 ```xml
     <!-- mqtt -->
