@@ -51,3 +51,15 @@ public class LocalDateTimeSerializerConfig {
     }
 }
 ```
+
+## Json 首字母大写驼峰
+
+```java
+    private static Gson gson = new GsonBuilder()
+            .setFieldNamingStrategy(f -> Character.toUpperCase(f.getName().charAt(0)) + f.getName().substring(1))
+            .create();
+
+    public static String toJson(Object object) {
+        return gson.toJson(object);
+    }
+```
