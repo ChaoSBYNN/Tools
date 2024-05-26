@@ -44,3 +44,10 @@ spring:
   main:
     allow-circular-references: true
 ```
+
+# Eclipse Paho MQTT会生成许多包含.lck文件的文件夹
+
+```java
+        // 使用内存持久化 去除.lck文件生成
+        MqttAsyncClient mqttClient = new MqttAsyncClient(config.getHostUrl(), MqttProperties.CLIENT_ID, new MemoryPersistence());
+```
