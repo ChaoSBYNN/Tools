@@ -14,3 +14,9 @@ spring:
         mongodb:
             uri: mongodb://${username}:${password}@${ip}:27017/${db}
 ```
+
+## Linux mongo cli
+
+```url
+https://www.mongodb.com/try/download/shell
+```
