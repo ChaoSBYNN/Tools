@@ -1,6 +1,6 @@
 # MyBatis
 
-mappr.xml src 同级目录生效
+## mappr.xml src 同级目录生效
 
 ```xml
 
@@ -20,4 +20,10 @@ mappr.xml src 同级目录生效
             </resource>
         </resources>
     </build>
+```
+
+## 更新操作字段允许为空
+
+```java
+@TableField(updateStrategy = FieldStrategy.ALWAYS)
 ```
