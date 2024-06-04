@@ -35,7 +35,7 @@ public class SpringCacheConfiguration extends CachingConfigurerSupport {
         RedisCacheConfiguration config = RedisCacheConfiguration.defaultCacheConfig();
  
         return config.serializeValuesWith(RedisSerializationContext.SerializationPair
-                // 序列化值
+                // 序列化值 TODO这里需要解决LocalDateTime转换问题
                 .fromSerializer(new GenericJackson2JsonRedisSerializer()))
                 // 设置过期时间
                 .entryTtl(Duration.ofMinutes(120))
@@ -44,3 +44,6 @@ public class SpringCacheConfiguration extends CachingConfigurerSupport {
     }
 }
 ```
+
+
+* (@Cacheable与Redis缓存)[https://blog.csdn.net/m0_37589586/article/details/87782001]
