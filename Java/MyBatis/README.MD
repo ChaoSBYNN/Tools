@@ -27,3 +27,15 @@
 ```java
 @TableField(updateStrategy = FieldStrategy.ALWAYS)
 ```
+
+
+## mybatis-plus日志设置只打印sql，不打印结果集
+```yaml
+# 日志配置
+mybatis-plus:
+mapper-locations: classpath:com/gblfy/**/mapping/.xml
+configuration:
+#log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# 注：把log-impl注释掉
+```
