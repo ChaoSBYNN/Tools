@@ -39,3 +39,22 @@ configuration:
 
 # 注：把log-impl注释掉
 ```
+
+项目中使用了mybatis-plus，又是spring boot工程，修改配置就可以了，具体操作为：
+step1：注释掉yml中mybatis-plus configuration log-impl输出到控制台的配置；
+
+```yaml
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#    map-underscore-to-camel-case: true
+```
+
+step2：在yml中增加log4j日志的配置
+
+```yaml
+logging:
+  level:
+    com.xxx.mapper: debug
+```
+
+修改后再次查看sql打印情况，发现只有sql语句、参数、结果集中数据的数量被打印出了，效果达到
