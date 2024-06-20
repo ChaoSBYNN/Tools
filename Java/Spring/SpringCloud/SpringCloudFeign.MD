@@ -28,6 +28,10 @@ public class FeignInterceptor implements RequestInterceptor {
 }
 ```
 
+## 子线程 header 传递
+
+
+
 ## 打印请求响应日志
 
 * [全局记录Feign的请求和响应日志](https://blog.csdn.net/youbl/article/details/109047987)
