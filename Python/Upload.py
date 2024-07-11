@@ -28,12 +28,20 @@ ssh.connect(hostname, port, username, password)
 # 使用 SFTP 协议传输文件
 sftp = ssh.open_sftp()
 
+# 进度条样式
+bar_format = "{desc}: {percentage:3.0f}%|{bar:50}| {n_fmt}/{total_fmt} [{elapsed}<{remaining}, {rate_fmt}]"
+
+
 # 显示进度条
 with tqdm(total=local_file_size,
           unit='B',
           unit_scale=True,
           desc=f'Uploading {os.path.basename(local_path)}',
-          colour='green') as pbar:
+          bar_format=bar_format,
+          ascii="-━",
+          ncols=80,
+          colour='green',
+          dynamic_ncols=True) as pbar:
     def callback(data_transferred, total_size):
         pbar.update(data_transferred - pbar.n)
 
@@ -44,3 +52,4 @@ sftp.close()
 ssh.close()
 
 print(f"File {os.path.basename(local_path)} transferred successfully to {hostname}:{remote_path}")
+
