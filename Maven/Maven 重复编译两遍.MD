@@ -1,3 +1,5 @@
+> *总结:* `mvn package` 会隐式执行 `mvn compile`
+
 在 Maven 中，`mvn compile` 和 `mvn package` 是两个不同的命令，它们分别对应 Maven 的不同生命周期阶段。虽然它们之间有一定的关联，但它们并不是重复执行。理解它们的区别和关系有助于更好地使用 Maven 构建项目。
 
 ### Maven 生命周期
