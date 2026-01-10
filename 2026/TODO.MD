@@ -1,2 +1,4 @@
 1. 拥塞控制策略(TWCC/REMB)
 2. 蜂窝架构 https://docs.aws.amazon.com/zh_cn/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/what-is-a-cell-based-architecture.html
+  * https://news.qq.com/rain/a/20240506A03VOY00
+  * https://docs.aws.amazon.com/zh_cn/prescriptive-guidance/latest/patterns/serverless-cell-router-architecture.html
