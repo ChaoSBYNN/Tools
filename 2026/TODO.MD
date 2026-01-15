@@ -4,3 +4,4 @@
   * https://docs.aws.amazon.com/zh_cn/prescriptive-guidance/latest/patterns/serverless-cell-router-architecture.html
 3. log https://www.zhihu.com/question/495104299/answer/1990966088905819983
 4. https://jos.org.cn/html/2025/7/7338.htm
+5. https://zhuanlan.zhihu.com/p/1994842738420629813
