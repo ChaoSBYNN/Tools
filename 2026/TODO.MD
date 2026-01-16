@@ -5,3 +5,5 @@
 3. log https://www.zhihu.com/question/495104299/answer/1990966088905819983
 4. https://jos.org.cn/html/2025/7/7338.htm
 5. https://zhuanlan.zhihu.com/p/1994842738420629813
+6. https://dev.to/polliog/i-replaced-redis-with-postgresql-and-its-faster-4942 我用 PostgreSQL 替代了 Redis
+7. https://www.cloudamqp.com/blog/message-queues-exaplined-with-analogies.html 消息队列：简易指南
