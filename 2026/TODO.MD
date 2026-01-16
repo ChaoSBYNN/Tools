@@ -9,3 +9,4 @@
 7. https://www.cloudamqp.com/blog/message-queues-exaplined-with-analogies.html 消息队列：简易指南
 8. https://www.cloudamqp.com/blog/amqp-vs-mqtt.html
 9. https://www.cloudamqp.com/blog/rabbitmq-and-websockets-part-1-amqp-mqtt-stomp.html
+10. https://zhuanlan.zhihu.com/p/501209052
