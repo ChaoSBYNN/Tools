@@ -13,3 +13,4 @@
 11. 如何进行代码审查？https://www.zhihu.com/question/593638664/answer/1996313654132511668
 12. https://zhuanlan.zhihu.com/p/1988718269805392236
 13. https://www.zhihu.com/question/28743839/answer/1996309778176173365
+14. https://dev.to/polliog/i-replaced-redis-with-postgresql-and-its-faster-4942
