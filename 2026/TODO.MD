@@ -17,6 +17,10 @@
 15. https://github.com/Together-Java/ModernJava
 16. 响应式编程
 
+NoC
+17. https://www.cnblogs.com/linhaostudy/p/18454096
+18. https://zhuanlan.zhihu.com/p/1998888912119174831
+
 ------------------------------------------------------
 
 回调地狱 异常黑洞
