@@ -21,6 +21,8 @@ NoC
 17. https://www.cnblogs.com/linhaostudy/p/18454096
 18. https://zhuanlan.zhihu.com/p/1998888912119174831
 
+19. 深入浅出 权限系统设计 - xnliu的文章 - 知乎 https://zhuanlan.zhihu.com/p/1998557446629774860
+
 ------------------------------------------------------
 
 回调地狱 异常黑洞
