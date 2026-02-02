@@ -25,6 +25,7 @@ NoC
 20. https://zhuanlan.zhihu.com/p/1985104072815183091
 21. https://www.zhihu.com/question/527751150/answer/1896872444519769014
 22. 为什么Git的教程都那么繁杂？ - rcbb.cc的回答 - 知乎 https://www.zhihu.com/question/594294987/answer/1896625057062704247
+23. 瞧瞧别人家的异常处理，那叫一个优雅！ - 苏三说技术的文章 - 知乎 https://zhuanlan.zhihu.com/p/2001591907235697437
 ------------------------------------------------------
 
 回调地狱 异常黑洞
