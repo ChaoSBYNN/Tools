@@ -24,6 +24,7 @@ NoC
 19. 深入浅出 权限系统设计 - xnliu的文章 - 知乎 https://zhuanlan.zhihu.com/p/1998557446629774860
 20. https://zhuanlan.zhihu.com/p/1985104072815183091
 21. https://www.zhihu.com/question/527751150/answer/1896872444519769014
+22. 为什么Git的教程都那么繁杂？ - rcbb.cc的回答 - 知乎 https://www.zhihu.com/question/594294987/answer/1896625057062704247
 ------------------------------------------------------
 
 回调地狱 异常黑洞
