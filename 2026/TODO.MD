@@ -29,6 +29,7 @@ NoC
 24. https://zhuanlan.zhihu.com/p/2000955059014500884
 25. https://zhuanlan.zhihu.com/p/2000974723820040776
 26. 如何画架构图？ - 偷天神猫的回答 - 知乎 https://www.zhihu.com/question/27440059/answer/2003604120880310038
+27. https://www.cnblogs.com/hongdada/p/14513036.html 对象内置锁ObjectMonitor
 ------------------------------------------------------
 
 回调地狱 异常黑洞
