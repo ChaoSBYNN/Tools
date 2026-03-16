@@ -31,9 +31,9 @@ NoC
 26. 如何画架构图？ - 偷天神猫的回答 - 知乎 https://www.zhihu.com/question/27440059/answer/2003604120880310038
 27. https://www.cnblogs.com/hongdada/p/14513036.html 对象内置锁ObjectMonitor
 28. https://juejin.cn/post/7255230505409527863 对象内置锁ObjectMonitor
-29. https://github.com/ChaoSBYNN/Tools/blob/master/Think/%E8%AE%BE%E8%AE%A1%E5%93%B2%E5%AD%A6.md 设计哲学
+29. ~~https://github.com/ChaoSBYNN/Tools/blob/master/Think/%E8%AE%BE%E8%AE%A1%E5%93%B2%E5%AD%A6.md 设计哲学~~
 30. https://matteolandi.net/plan-files.html .plan
-31. https://nesbitt.io/2026/02/21/whale-fall.html
+31. ~~https://nesbitt.io/2026/02/21/whale-fall.html~~
 ------------------------------------------------------
 
 回调地狱 异常黑洞
