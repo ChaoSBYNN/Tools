@@ -34,6 +34,7 @@ NoC
 29. ~~https://github.com/ChaoSBYNN/Tools/blob/master/Think/%E8%AE%BE%E8%AE%A1%E5%93%B2%E5%AD%A6.md 设计哲学~~
 30. https://matteolandi.net/plan-files.html .plan
 31. ~~https://nesbitt.io/2026/02/21/whale-fall.html~~
+32. 如何直观地理解系统的可观测性？ - vivo互联网技术的回答 - 知乎 https://www.zhihu.com/question/46930498/answer/2015385518918088038
 ------------------------------------------------------
 
 回调地狱 异常黑洞
