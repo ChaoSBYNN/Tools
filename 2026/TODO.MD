@@ -35,6 +35,8 @@ NoC
 30. https://matteolandi.net/plan-files.html .plan
 31. ~~https://nesbitt.io/2026/02/21/whale-fall.html~~
 32. 如何直观地理解系统的可观测性？ - vivo互联网技术的回答 - 知乎 https://www.zhihu.com/question/46930498/answer/2015385518918088038
+33. 什么是函数式编程思维？ - AI刺客的回答 - 知乎 https://www.zhihu.com/question/28292740/answer/2016895664433407528 
+34. 柯里化
 ------------------------------------------------------
 
 回调地狱 异常黑洞
