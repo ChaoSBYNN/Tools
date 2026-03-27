@@ -38,6 +38,7 @@ NoC
 33. 什么是函数式编程思维？ - AI刺客的回答 - 知乎 https://www.zhihu.com/question/28292740/answer/2016895664433407528 
 34. 柯里化
 35. https://laike9m.com/blog/avoid-mini-frameworks,171/
+36. https://blog.armeet.ca/becoming-the-machine/
 ------------------------------------------------------
 
 回调地狱 异常黑洞
