@@ -39,6 +39,7 @@ NoC
 34. 柯里化
 35. https://laike9m.com/blog/avoid-mini-frameworks,171/
 36. https://blog.armeet.ca/becoming-the-machine/
+37. Spring 项目整合 RabbitMq 的方法有哪些？ - bohu的回答 - 知乎 https://www.zhihu.com/question/583716850/answer/2022694264996406230
 ------------------------------------------------------
 
 回调地狱 异常黑洞
