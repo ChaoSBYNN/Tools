@@ -40,6 +40,7 @@ NoC
 35. https://laike9m.com/blog/avoid-mini-frameworks,171/
 36. https://blog.armeet.ca/becoming-the-machine/
 37. Spring 项目整合 RabbitMq 的方法有哪些？ - bohu的回答 - 知乎 https://www.zhihu.com/question/583716850/answer/2022694264996406230
+38. SchedulingConfigurer springboot定时任务如何分配线程优化？ - 阁歌各格隔的回答 - 知乎 https://www.zhihu.com/question/5826234647/answer/2024034749782435597
 ------------------------------------------------------
 
 回调地狱 异常黑洞
