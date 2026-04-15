@@ -1,7 +1,7 @@
 # Java 目录
 
 ![Java](./Doc/image.png)
-![JDBC](./Java JDBC.svg)
+![JDBC](./JavaJDBC.svg)
 |目录                          |描述|
 |:---:                         |:---:|
 |[DSA](./DSA)                  |签名算法|
